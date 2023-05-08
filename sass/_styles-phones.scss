@@ -1,0 +1,120 @@
+@media (max-width:480px) {
+    main {
+        height: 180vh;
+        background-position: top;
+
+        nav {
+            #navbar-right {
+                margin: 30rem 0;
+            }
+        }
+
+        header {
+            padding: 0 2rem;
+
+            #header-text {
+                @include tamanio(100%, 100%);
+                position: relative;
+
+                h1 {
+                    width: 100%;
+                    font-size: 7rem;
+                    border: 8px solid white;
+                }
+            }
+        }
+    }
+
+    #leader-section {
+        padding: 0 2rem;
+        height: 300vh;
+
+        #leader-section-container {
+            @include tamanio(100%, 100%);
+            @include flex(column, center, center);
+
+            #leader-img {
+                @include tamanio(100%, 40%);
+                @include flex(row, center, center);
+
+                img {
+                    height: 80%;
+                    width: 90%;
+                }
+            }
+
+            #leader-text {
+                @include tamanio(100%, 50%);
+                text-align: center;
+
+                div {
+                    gap: 1rem;
+
+                    h2 {
+                        font-size: 5rem;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        font-size: 4rem;
+                        line-height: normal;
+                    }
+                }
+
+            }
+        }
+    }
+
+    #creations-section {
+        height: 250vh;
+        padding: 0 2rem;
+
+        #creations-text {
+            justify-content: center;
+
+            h3 {
+                font-size: 5rem;
+            }
+
+            a {
+                display: none;
+            }
+        }
+
+        #creations-container-images {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8, 1fr);
+        }
+    }
+
+    footer {
+        height: 100vh;
+        padding: 0 2rem;
+        flex-direction: column;
+
+        #footer-left {
+            @include tamanio(100%, 80%);
+            align-items: center;
+            gap: 2rem;
+
+            ul {
+                flex-direction: column;
+
+                a {
+                    li {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        #footer-rigth {
+            @include tamanio(100%, 20%);
+            align-items: center;
+
+            span {
+                font-size: 2rem;
+            }
+        }
+    }
+}

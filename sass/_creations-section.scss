@@ -1,0 +1,96 @@
+#creations-section {
+    @include tamanio(100%, 150vh);
+    min-width: 1000px;
+    padding: 0 6rem;
+
+    #creations-text {
+        @include tamanio(100%, 20%);
+        @include flex(row, space-between, center);
+
+        h3 {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            border: 1px solid black;
+            padding: 0.5rem 3rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+
+            &:active {
+                color: white;
+                background-color: black
+            }
+        }
+    }
+
+    #creations-container-images {
+        @include tamanio(100%, 80%);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+
+        div {
+            color: white;
+            @include flex(row, start, end);
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 100;
+
+            &:active h4 {
+                backdrop-filter: contrast(0.2);
+            }
+
+            h4 {
+                @include tamanio(100%, 100%);
+                display: flex;
+                align-items: flex-end;
+                padding: 2rem;
+            }
+
+            &:nth-child(1) {
+                background-image: url(../imagenes/image-deep-earth.jpg);
+                background-size: cover;
+            }
+
+            &:nth-child(2) {
+                background-image: url(../imagenes/image-night-arcade.jpg);
+                background-size: cover;
+            }
+
+            &:nth-child(3) {
+                background-image: url(../imagenes/image-soccer-team.jpg);
+                background-size: cover;
+            }
+
+            &:nth-child(4) {
+                background-image: url(../imagenes/image-grid.jpg);
+                background-size: cover;
+            }
+
+            &:nth-child(5) {
+                background-image: url(../imagenes/image-from-above.jpg);
+                background-size: cover;
+            }
+
+            &:nth-child(6) {
+                background-image: url(../imagenes/image-pocket-borealis.jpg);
+                background-size: cover;
+            }
+
+            &:nth-child(7) {
+                background-image: url(../imagenes/image-curiosity.jpg);
+                background-size: cover;
+            }
+
+            &:nth-child(8) {
+                background-image: url(../imagenes/image-fisheye.jpg);
+                background-size: cover;
+            }
+        }
+    }
+}

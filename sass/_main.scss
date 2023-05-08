@@ -1,0 +1,79 @@
+main {
+    @include tamanio(100%, 110vh);
+    min-width: 1000px;
+    background-image: url(../imagenes/image-hero.jpg);
+    background-size: cover;
+
+
+    nav {
+        @include flex(row, center, center);
+        padding: 2rem;
+
+        #navbar-left {
+            @include tamanio(50%, 100%);
+            @include flex(row, start, center);
+
+            #menu {
+                display: none;
+            }
+        }
+
+        #navbar-right {
+            @include tamanio(50%, 100%);
+            @include flex(row, end, center);
+
+            ul {
+                @include flex(row, end, center);
+                @include tamanio(80%, 100%);
+                gap: 2rem;
+
+                a {
+                    text-decoration: none;
+
+
+
+                    li {
+                        list-style: none;
+                        color: white;
+                        font-weight: 900;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 0;
+                            background-color: white;
+                            height: 2px;
+                            position: relative;
+                            bottom: -10px;
+                        }
+
+                        &:active::after {
+                            width: 50%;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+        @include tamanio(100%, 100vh);
+        padding: 0 6rem;
+
+        #header-text {
+            @include tamanio(100%, 80vh);
+            @include flex(row, start, center);
+
+            h1 {
+                color: white;
+                text-transform: uppercase;
+                border: 1px solid white;
+                font-weight: 100;
+                font-size: 4.5rem;
+                width: 70%;
+                padding: 2rem;
+            }
+        }
+    }
+}

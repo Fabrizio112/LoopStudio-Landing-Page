@@ -1,0 +1,62 @@
+@media (max-width:768px) {
+    main {
+        nav {
+            flex-direction: column;
+            z-index: 2;
+            position: relative;
+
+            #navbar-left {
+                width: 100%;
+                justify-content: space-between;
+
+                #menu {
+                    display: inline-block;
+                }
+            }
+
+            #navbar-right {
+                display: none;
+                width: 100%;
+                justify-content: center;
+                margin: 20rem 0;
+
+                ul {
+                    width: 100%;
+                    @include flex(column, center, start);
+
+                    a {
+                        li {
+                            font-size: 2rem;
+                            font-family: $fuente-titulo;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+
+        header {
+            #header-text {
+                z-index: 1;
+                position: relative;
+                top: 12%;
+
+                h1 {
+                    font-size: 3.2rem;
+                }
+            }
+        }
+    }
+
+    #leader-section {
+        #leader-section-container {
+            #leader-text {
+                div {
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

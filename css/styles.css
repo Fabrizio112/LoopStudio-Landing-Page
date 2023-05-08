@@ -1,0 +1,476 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+}
+
+main {
+  width: 100%;
+  height: 110vh;
+  min-width: 1000px;
+  background-image: url(../imagenes/image-hero.jpg);
+  background-size: cover;
+}
+main nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+main nav #navbar-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+main nav #navbar-left #menu {
+  display: none;
+}
+main nav #navbar-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+main nav #navbar-right ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  gap: 2rem;
+}
+main nav #navbar-right ul a {
+  text-decoration: none;
+}
+main nav #navbar-right ul a li {
+  list-style: none;
+  color: white;
+  font-weight: 900;
+}
+main nav #navbar-right ul a li::after {
+  content: "";
+  display: block;
+  width: 0;
+  background-color: white;
+  height: 2px;
+  position: relative;
+  bottom: -10px;
+}
+main nav #navbar-right ul a li:active::after {
+  width: 50%;
+  margin: 0 auto;
+}
+main header {
+  width: 100%;
+  height: 100vh;
+  padding: 0 6rem;
+}
+main header #header-text {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+main header #header-text h1 {
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid white;
+  font-weight: 100;
+  font-size: 4.5rem;
+  width: 70%;
+  padding: 2rem;
+}
+
+#leader-section {
+  width: 100%;
+  height: 130vh;
+  min-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6rem;
+}
+#leader-section #leader-section-container {
+  width: 100%;
+  height: 65%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+#leader-section #leader-section-container #leader-img {
+  grid-column: 1/10;
+  grid-row: 1/11;
+}
+#leader-section #leader-section-container #leader-img img {
+  width: 100%;
+  height: 100%;
+}
+#leader-section #leader-section-container #leader-text {
+  grid-column: 8/13;
+  grid-row: 5/13;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#leader-section #leader-section-container #leader-text div {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#leader-section #leader-section-container #leader-text div h2 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+#leader-section #leader-section-container #leader-text div p {
+  line-height: 1.5rem;
+}
+
+#creations-section {
+  width: 100%;
+  height: 150vh;
+  min-width: 1000px;
+  padding: 0 6rem;
+}
+#creations-section #creations-text {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#creations-section #creations-text h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+#creations-section #creations-text a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 0.5rem 3rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+#creations-section #creations-text a:active {
+  color: white;
+  background-color: black;
+}
+#creations-section #creations-container-images {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+#creations-section #creations-container-images div {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+#creations-section #creations-container-images div:active h4 {
+  backdrop-filter: contrast(0.2);
+}
+#creations-section #creations-container-images div h4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+}
+#creations-section #creations-container-images div:nth-child(1) {
+  background-image: url(../imagenes/image-deep-earth.jpg);
+  background-size: cover;
+}
+#creations-section #creations-container-images div:nth-child(2) {
+  background-image: url(../imagenes/image-night-arcade.jpg);
+  background-size: cover;
+}
+#creations-section #creations-container-images div:nth-child(3) {
+  background-image: url(../imagenes/image-soccer-team.jpg);
+  background-size: cover;
+}
+#creations-section #creations-container-images div:nth-child(4) {
+  background-image: url(../imagenes/image-grid.jpg);
+  background-size: cover;
+}
+#creations-section #creations-container-images div:nth-child(5) {
+  background-image: url(../imagenes/image-from-above.jpg);
+  background-size: cover;
+}
+#creations-section #creations-container-images div:nth-child(6) {
+  background-image: url(../imagenes/image-pocket-borealis.jpg);
+  background-size: cover;
+}
+#creations-section #creations-container-images div:nth-child(7) {
+  background-image: url(../imagenes/image-curiosity.jpg);
+  background-size: cover;
+}
+#creations-section #creations-container-images div:nth-child(8) {
+  background-image: url(../imagenes/image-fisheye.jpg);
+  background-size: cover;
+}
+
+footer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6rem;
+  min-width: 1000px;
+  background-color: black;
+  color: white;
+  margin-top: 4rem;
+}
+footer #footer-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+footer #footer-left ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+footer #footer-left ul a {
+  text-decoration: none;
+}
+footer #footer-left ul a li {
+  list-style-type: none;
+  color: white;
+}
+footer #footer-left ul a li::after {
+  content: "";
+  display: block;
+  position: relative;
+  background-color: white;
+  height: 2px;
+  bottom: -10px;
+  width: 0;
+  margin: 0 auto;
+}
+footer #footer-left ul a li:active::after {
+  width: 50%;
+}
+footer #footer-rigth {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+}
+footer #footer-rigth #footer-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+footer #footer-rigth #footer-social-media div {
+  cursor: pointer;
+}
+footer #footer-rigth #footer-social-media div::after {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: -5px;
+  background-color: white;
+  height: 2px;
+  width: 0;
+  margin: 0 auto;
+}
+footer #footer-rigth #footer-social-media div:active::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  main nav {
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+  }
+  main nav #navbar-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  main nav #navbar-left #menu {
+    display: inline-block;
+  }
+  main nav #navbar-right {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    margin: 20rem 0;
+  }
+  main nav #navbar-right ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  main nav #navbar-right ul a li {
+    font-size: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+  }
+  main header #header-text {
+    z-index: 1;
+    position: relative;
+    top: 12%;
+  }
+  main header #header-text h1 {
+    font-size: 3.2rem;
+  }
+  #leader-section #leader-section-container #leader-text div h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    height: 180vh;
+    background-position: top;
+  }
+  main nav #navbar-right {
+    margin: 30rem 0;
+  }
+  main header {
+    padding: 0 2rem;
+  }
+  main header #header-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  main header #header-text h1 {
+    width: 100%;
+    font-size: 7rem;
+    border: 8px solid white;
+  }
+  #leader-section {
+    padding: 0 2rem;
+    height: 300vh;
+  }
+  #leader-section #leader-section-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #leader-section #leader-section-container #leader-img {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #leader-section #leader-section-container #leader-img img {
+    height: 80%;
+    width: 90%;
+  }
+  #leader-section #leader-section-container #leader-text {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+  }
+  #leader-section #leader-section-container #leader-text div {
+    gap: 1rem;
+  }
+  #leader-section #leader-section-container #leader-text div h2 {
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
+  #leader-section #leader-section-container #leader-text div p {
+    font-size: 4rem;
+    line-height: normal;
+  }
+  #creations-section {
+    height: 250vh;
+    padding: 0 2rem;
+  }
+  #creations-section #creations-text {
+    justify-content: center;
+  }
+  #creations-section #creations-text h3 {
+    font-size: 5rem;
+  }
+  #creations-section #creations-text a {
+    display: none;
+  }
+  #creations-section #creations-container-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
+  footer {
+    height: 100vh;
+    padding: 0 2rem;
+    flex-direction: column;
+  }
+  footer #footer-left {
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    gap: 2rem;
+  }
+  footer #footer-left ul {
+    flex-direction: column;
+  }
+  footer #footer-left ul a li {
+    font-size: 2.5rem;
+  }
+  footer #footer-rigth {
+    width: 100%;
+    height: 20%;
+    align-items: center;
+  }
+  footer #footer-rigth span {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

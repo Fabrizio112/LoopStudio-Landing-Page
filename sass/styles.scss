@@ -1,0 +1,23 @@
+@mixin tamanio($a, $b) {
+    width: $a;
+    height: $b;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$fuente-parrafo: 'Alata', sans-serif;
+$fuente-titulo: 'Josefin Sans', sans-serif;
+
+
+@import "general";
+@import "main";
+@import "leader-section";
+@import "creations-section";
+@import "footer";
+@import "styles-tablets";
+@import "styles-phones";
